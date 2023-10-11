@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    const float SPEED_move=3.0f;
+    public int SPEED_move;
     Rigidbody2D rm;
     bool leftpress = false;
     bool rightpress = false;
