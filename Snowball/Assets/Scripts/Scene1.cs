@@ -9,4 +9,9 @@ public class Scene1 : MonoBehaviour
     {
         SceneManager.LoadScene("Scene1");//s
     }
+
+    public void Koonclick2()
+    {
+        SceneManager.LoadScene("Scene1COPY");//s
+    }
 }

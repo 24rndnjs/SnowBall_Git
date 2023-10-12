@@ -12,7 +12,7 @@ public class StartClick : MonoBehaviour
         {
             SceneManager.LoadScene("Scene1");
         }
-        else if (Input.GetMouseButtonDown(2))
+        else if (Input.GetMouseButtonDown(1))
         {
             SceneManager.LoadScene("Scene1");
         }
