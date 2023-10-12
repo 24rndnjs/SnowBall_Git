@@ -375,8 +375,8 @@ GameObject:
   - component: {fileID: 862724634}
   - component: {fileID: 862724633}
   m_Layer: 5
-  m_Name: Square (1)
-  m_TagString: Untagged
+  m_Name: Triger
+  m_TagString: Triger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,9 +492,10 @@ GameObject:
   - component: {fileID: 926409781}
   - component: {fileID: 926409780}
   - component: {fileID: 926409779}
+  - component: {fileID: 926409784}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -626,6 +627,18 @@ Transform:
   m_Father: {fileID: 139670995}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &926409784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926409778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb100a106b5fa44ca50c25354696e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1095430680
 GameObject:
   m_ObjectHideFlags: 0
