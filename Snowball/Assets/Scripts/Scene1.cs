@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class scene2 : MonoBehaviour
+public class Scene1 : MonoBehaviour
 {
-    public void Minjionclick()
+    public void Koonclick()
     {
-
-        SceneManager.LoadScene("Scene2");
+        SceneManager.LoadScene("Scene1");//s
     }
-
-        
-    
-
 }

@@ -1,25 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
-public Vector2 Size;
-public LayerMask WhatIsLayer;
-
 
 public class Collisiondetection : MonoBehaviour
 {
-    //Vector2 point, Vector2 size, float angle, int layerMask
-    Collider2D Physics2D.OverlapBox(point, size, angle);
-    Collider2D Physics2D.OverlapBox(point, size, angle, layerMask);
-    void Start()
+    public GameObject Target1;
+    public GameObject Target2;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Collider2D hit = Physics2D.OverlapBox(transform.position, size, 0, whatIsLayer);
-        Debug.Log(hit.name);
+        Target1.SetActive(true);
+        Target2.SetActive(true);
     }
 
-    void OnDrawGizmos()
+    void OnTriggerExit2D(Collider2D other)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, size);
+        Target1.SetActive(false);
+        Target2.SetActive(false);
     }
 }
