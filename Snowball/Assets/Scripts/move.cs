@@ -8,7 +8,7 @@ public class move : MonoBehaviour
     Rigidbody2D rm;
     bool leftpress = false;
     bool rightpress = false;
-
+    //
     public void Start()
     {
         rm = GetComponent<Rigidbody2D>();
