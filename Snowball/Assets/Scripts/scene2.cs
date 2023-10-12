@@ -7,6 +7,6 @@ public class scene2 : MonoBehaviour
 {
     public void Minjionclick()
     {
-        SceneManager.LoadScene("Scene2");//s
+        SceneManager.LoadScene("Scene2");
     }
 }
