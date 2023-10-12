@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class Collisiondetection : MonoBehaviour
 {
-    private bool isOverlapped = false;
-    private Renderer triggerRenderer;
+    public GameObject Target1;
+    public GameObject Target2;
 
-    private Color originColor;
-
-    void Start()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        triggerRenderer = GetComponent<Renderer>();
-        originColor = triggerRenderer.material.color;
+        Target1.SetActive(true);
+        Target2.SetActive(true);
     }
-    private void OnTriggerStay2D(Collider2D other)
+
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
-        {
-            isOverlapped = true;
-            triggerRenderer.material.color = Color.red;
-        }
+        Target1.SetActive(false);
+        Target2.SetActive(false);
     }
 }
