@@ -8,19 +8,23 @@ public class move : MonoBehaviour
     Rigidbody2D rm;
     bool leftpress = false;
     bool rightpress = false;
+    float horizontal;
+    public SpriteRenderer rend;
     //
     public void Start()
     {
         rm = GetComponent<Rigidbody2D>();
+        rend = GetComponent<SpriteRenderer>();
+        horizontal= Input.GetAxis("Horizontal");
     }
 
      void Update()
     {
-        if(rm!= null)
+        if (rm != null)
         {
-            float dist=SPEED_move*Time.deltaTime;
+            float dist = SPEED_move * Time.deltaTime;
             Vector2 pos = transform.position;
-            if(Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 leftpress = true;
             }
@@ -28,24 +32,27 @@ public class move : MonoBehaviour
             {
                 leftpress = false;
             }
-            if(leftpress)
+            if (leftpress)
             {
                 pos.x -= dist;
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                rightpress = true;  
+                rightpress = true;
             }
             if (Input.GetKeyUp(KeyCode.D))
             {
                 rightpress = false;
             }
-            if(rightpress)
+            if (rightpress)
             {
                 pos.x += dist;
             }
             transform.position = pos;
         }
-        
+        if (horizontal > 0)
+        {
+            rend.flipX = false; // Player의 Sprite를 좌우반전시키는 함수 , true일 때 반전 
+        }
     }
 }
