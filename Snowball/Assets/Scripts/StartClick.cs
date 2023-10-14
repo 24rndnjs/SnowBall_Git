@@ -10,11 +10,11 @@ public class StartClick : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("Scene1");
+            LoadingSceneController.LoadScene("Scene1");
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            SceneManager.LoadScene("Scene1");
+            LoadingSceneController.LoadScene("Scene1");
         }
     }
 }
