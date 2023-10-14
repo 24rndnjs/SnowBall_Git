@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bus : MonoBehaviour
 {
-    public float _Speed; // 버스의 이동 속도
+    public float _Speed; //속도
     private Vector3 _direct = Vector3.zero;
     private GameObject _targetObj;
 
@@ -20,7 +20,7 @@ public class bus : MonoBehaviour
         this.transform.position += new Vector3(0.0f, 0.01f, 0.0f);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
