@@ -5,24 +5,44 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] float setTime = 30.0f;
     [SerializeField] Text countdownText;
+    [SerializeField] Text keyPressesText;
+    [SerializeField] int maxKeyPresses = 200;
+    int currentKeyPresses = 0;
 
     void Start()
     {
-        countdownText.text = setTime.ToString();
+        UpdateCountdownText();
+        UpdateKeyPressesText();
     }
 
     void Update()
     {
-        if (setTime > 0)
+        if (setTime > 0 && currentKeyPresses < maxKeyPresses)
         {
             setTime -= Time.deltaTime;
-            countdownText.text = Mathf.Round(setTime).ToString();
+            UpdateCountdownText();
         }
         else
         {
             setTime = 0f;
             Time.timeScale = 0.0f;
-            countdownText.text = Mathf.Round(setTime).ToString();
+            UpdateCountdownText();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && currentKeyPresses < maxKeyPresses)
+        {
+            currentKeyPresses++;
+            UpdateKeyPressesText();
+        }
+    }
+
+    void UpdateCountdownText()
+    {
+        countdownText.text = "남은 시간: " + Mathf.Round(setTime).ToString();
+    }
+
+    void UpdateKeyPressesText()
+    {
+        keyPressesText.text = "남은 갯수: " + (maxKeyPresses - currentKeyPresses);
     }
 }
