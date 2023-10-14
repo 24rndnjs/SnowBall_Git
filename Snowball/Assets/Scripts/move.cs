@@ -4,55 +4,41 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    public int SPEED_move;
+    public float SPEED_move; // SPEED_move를 float로 변경
     Rigidbody2D rm;
     bool leftpress = false;
     bool rightpress = false;
-    float horizontal;
-    public SpriteRenderer rend;
-    //
-    public void Start()
+    SpriteRenderer spriteRenderer;
+    Animator anim;
+
+    void Awake()
     {
-        rm = GetComponent<Rigidbody2D>();
-        rend = GetComponent<SpriteRenderer>();
-        horizontal= Input.GetAxis("Horizontal");
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        rm = GetComponent<Rigidbody2D>(); // rm 초기화
     }
 
-     void Update()
+    void Update()
     {
-        if (rm != null)
+        float horizontal = Input.GetAxis("Horizontal"); // Input.GetAxis("Horizontal")을 여기서 읽도록 변경
+
+        // 방향 전환
+        if (horizontal < 0)
+            spriteRenderer.flipX = false; // 왼쪽으로 움직일 때는 오른쪽을 보도록 설정
+        else if (horizontal > 0)
+            spriteRenderer.flipX = true; // 오른쪽으로 움직일 때는 왼쪽을 보도록 설정
+
+        // 애니메이션
+        anim.SetBool("isWalking", Mathf.Abs(horizontal) > 0);
+
+        // 이동 로직
+        float dist = SPEED_move * horizontal * Time.deltaTime;
+        Vector2 pos = transform.position;
+
+        if (horizontal != 0)
         {
-            float dist = SPEED_move * Time.deltaTime;
-            Vector2 pos = transform.position;
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                leftpress = true;
-            }
-            if (Input.GetKeyUp(KeyCode.A))
-            {
-                leftpress = false;
-            }
-            if (leftpress)
-            {
-                pos.x -= dist;
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                rightpress = true;
-            }
-            if (Input.GetKeyUp(KeyCode.D))
-            {
-                rightpress = false;
-            }
-            if (rightpress)
-            {
-                pos.x += dist;
-            }
+            pos.x += dist;
             transform.position = pos;
-        }
-        if (horizontal > 0)
-        {
-            rend.flipX = false; // Player의 Sprite를 좌우반전시키는 함수 , true일 때 반전 
         }
     }
 }
