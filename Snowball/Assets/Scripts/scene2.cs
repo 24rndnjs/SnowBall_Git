@@ -11,5 +11,9 @@ public class scene2 : MonoBehaviour
         SceneManager.LoadScene("Scene2");
     }
 
+    public void Minjionclick1111()
+    {
 
+        SceneManager.LoadScene("Scene2 Copy");
+    }
 }
