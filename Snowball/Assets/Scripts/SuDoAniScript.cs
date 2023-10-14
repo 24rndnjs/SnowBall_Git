@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SuDoAniScript : MonoBehaviour
 {
-    public Animator animator; // Animator 加己 函荐 积己
+    Animator animator; // Animator 加己 函荐 积己
 
     private void Start()
     {

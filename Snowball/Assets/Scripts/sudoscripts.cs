@@ -10,6 +10,7 @@ public class sudoscripts : MonoBehaviour
     public GameObject OffSuDoBtn;
     public GameObject OnMirrorTriger;
     public Text Sucses;
+    public Text Sucses2;
     void OnTriggerEnter2D(Collider2D other)
     {
         Target1.SetActive(true);
@@ -24,6 +25,7 @@ public class sudoscripts : MonoBehaviour
     public void Take_a_ShowerBtnOnclick()
     {
         Sucses.text = "- ¾Ä±â ¼º°ø! -";
+        Sucses2.text = "- ¾Ä±â ¼º°ø! -";
         OffSuDoBtn.SetActive(false);
         OnMirrorTriger.SetActive(true);
     }
