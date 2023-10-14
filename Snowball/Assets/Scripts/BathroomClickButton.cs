@@ -13,4 +13,8 @@ public class BathroomClickButton : MonoBehaviour
     {
         SceneManager.LoadScene("BathRoomCOPY");
     }
+    public void gooutbus()
+    {
+        SceneManager.LoadScene("bus");
+    }
 }

@@ -947,7 +947,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 837375629}
         m_TargetAssemblyTypeName: scene2, Assembly-CSharp
-        m_MethodName: Minjionclick
+        m_MethodName: Minjionclick1111
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
