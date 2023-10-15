@@ -10,7 +10,7 @@ public class BathroomClickButton : MonoBehaviour
         SceneManager.LoadScene("BathRoomScene");
     }
     public void BathRoommirror()
-    {
+    {////5555
         SceneManager.LoadScene("BathRoomCOPY");
     }
     public void gooutbus()
