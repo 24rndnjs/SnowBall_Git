@@ -15,6 +15,6 @@ public class BathroomClickButton : MonoBehaviour
     }
     public void gooutbus()
     {
-        SceneManager.LoadScene("loadingbus");
+        LoadingSceneController1.LoadScene("bus");
     }
 }
