@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/bus.unity
     guid: 29b3ee8d1d7344b47af7b1414338186d
+  - enabled: 1
+    path: Assets/Scenes/loadingbus.unity
+    guid: d15d5d806c0a7ff42995b40caa930ead
   m_configObjects: {}
