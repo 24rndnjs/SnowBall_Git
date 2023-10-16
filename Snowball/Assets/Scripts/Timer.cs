@@ -2,17 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
-{//ssexminji
+{
     [SerializeField] float setTime = 30.0f;
     [SerializeField] Text countdownText;
     [SerializeField] Text keyPressesText;
+    [SerializeField] Text clearText; // 추가: 클리어 텍스트
     [SerializeField] int maxKeyPresses = 200;
     int currentKeyPresses = 0;
+    bool isSpacebarEnabled = true;
 
     void Start()
     {
         UpdateCountdownText();
         UpdateKeyPressesText();
+        clearText.gameObject.SetActive(false); // 클리어 텍스트 비활성화
     }
 
     void Update()
@@ -29,10 +32,16 @@ public class Timer : MonoBehaviour
             UpdateCountdownText();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && currentKeyPresses < maxKeyPresses)
+        if (isSpacebarEnabled && Input.GetKeyDown(KeyCode.Space) && currentKeyPresses < maxKeyPresses)
         {
             currentKeyPresses++;
             UpdateKeyPressesText();
+
+            if (currentKeyPresses >= maxKeyPresses)
+            {
+                isSpacebarEnabled = false; // 스페이스바 입력 비활성화
+                ShowClearText(); // 클리어 텍스트 표시
+            }
         }
     }
 
@@ -44,5 +53,10 @@ public class Timer : MonoBehaviour
     void UpdateKeyPressesText()
     {
         keyPressesText.text = "남은 갯수: " + (maxKeyPresses - currentKeyPresses);
+    }
+
+    void ShowClearText()
+    {
+        clearText.gameObject.SetActive(true); // 클리어 텍스트 활성화
     }
 }
