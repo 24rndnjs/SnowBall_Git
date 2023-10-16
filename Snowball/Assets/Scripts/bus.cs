@@ -8,6 +8,8 @@ public class bus : MonoBehaviour
     public float _Speed; //¼Óµµ
     private Vector3 _direct = Vector3.zero;
     private GameObject _targetObj;
+    private float fDestroyTime = 2f;
+    private float fTickTime;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,12 @@ public class bus : MonoBehaviour
     {
         if(transform.position == _targetObj.transform.position)
         {
-            SceneManager.LoadScene("busCOPY");
+            fTickTime += Time.deltaTime;
+
+            if (fTickTime >= fDestroyTime)
+            {
+                SceneManager.LoadScene("busCOPY");
+            }
         }
         this.transform.position = Vector3.MoveTowards(this.transform.position, _targetObj.transform.position, _Speed * Time.deltaTime);
     }
