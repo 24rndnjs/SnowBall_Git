@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
-{
+{//ssexminji
     [SerializeField] float setTime = 30.0f;
     [SerializeField] Text countdownText;
     [SerializeField] Text keyPressesText;
