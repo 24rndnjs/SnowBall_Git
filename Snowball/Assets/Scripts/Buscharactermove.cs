@@ -20,12 +20,12 @@ public class Buscharactermove : MonoBehaviour
         if (horizontalInput < 0)
         {
             flipMove = Vector3.left;
-            transform.localScale = new Vector3(450, 450, 53);
+            transform.localScale = new Vector3(349, 349, 349);
         }
         else if (horizontalInput > 0)
         {
             flipMove = Vector3.right;
-            transform.localScale = new Vector3(-450, 450, 53);
+            transform.localScale = new Vector3(-349, 349, 349);
         }
 
         transform.position += flipMove * moveSpeed * Time.deltaTime;
