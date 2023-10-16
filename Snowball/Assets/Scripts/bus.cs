@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class bus : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class bus : MonoBehaviour
 
     void Update()
     {
-        
+        if(transform.position == _targetObj.transform.position)
+        {
+            SceneManager.LoadScene("busCOPY");
+        }
         this.transform.position = Vector3.MoveTowards(this.transform.position, _targetObj.transform.position, _Speed * Time.deltaTime);
     }
 }
