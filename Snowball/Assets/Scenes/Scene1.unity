@@ -426,7 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202392676}
   m_Layer: 0
-  m_Name: GameObject3
+  m_Name: Collisiondetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +446,6 @@ Transform:
   m_Children:
   - {fileID: 603573939}
   - {fileID: 989848589}
-  - {fileID: 1702195967}
   m_Father: {fileID: 1340841306}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1560,6 +1559,7 @@ RectTransform:
   - {fileID: 1637805992}
   - {fileID: 1756579347}
   - {fileID: 202392676}
+  - {fileID: 1702195967}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1859,7 +1859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637805992}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Collisiondetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1905,7 +1905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1702195967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1920,8 +1920,8 @@ RectTransform:
   m_Children:
   - {fileID: 132235994}
   - {fileID: 774028055}
-  m_Father: {fileID: 202392676}
-  m_RootOrder: 2
+  m_Father: {fileID: 1340841306}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2056,7 +2056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1756579347}
   m_Layer: 5
-  m_Name: GameObject (1)
+  m_Name: Collisiondetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
