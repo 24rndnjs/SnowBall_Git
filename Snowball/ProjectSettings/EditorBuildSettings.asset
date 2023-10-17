@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inbaljunso.unity
     guid: 8560a6f843a5b4c4b8669dcd27c17842
+  - enabled: 1
+    path: Assets/Scenes/wheel.unity
+    guid: 9cefef1f444195147b953b35066ce1d7
   m_configObjects: {}
