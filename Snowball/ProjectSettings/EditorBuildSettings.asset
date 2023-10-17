@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Baljunso.unity
     guid: e3d63f51bcb0e9846b1e096a1f585a7e
+  - enabled: 1
+    path: Assets/Scenes/Inbaljunso.unity
+    guid: 8560a6f843a5b4c4b8669dcd27c17842
   m_configObjects: {}

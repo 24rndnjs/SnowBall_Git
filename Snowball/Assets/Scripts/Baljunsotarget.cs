@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Baljunsotarget : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class Baljunsotarget : MonoBehaviour
     public float _Speed; //¼Óµµ
     private Vector3 _direct = Vector3.zero;
     private GameObject _targetObj;
-
+    private float fDestroyTime = 0.5f;
+    private float fTickTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,16 @@ public class Baljunsotarget : MonoBehaviour
     }
     private void Update()
     {
+
+        if (transform.position == _targetObj.transform.position)
+        {
+            fTickTime += Time.deltaTime;
+
+            if (fTickTime >= fDestroyTime)
+            {
+                SceneManager.LoadScene("Inbaljunso");
+            }
+        }
         this.transform.position = Vector3.MoveTowards(this.transform.position, _targetObj.transform.position, _Speed * Time.deltaTime);
     }
 }
