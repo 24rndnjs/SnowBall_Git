@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Baljunsotarget : MonoBehaviour
+public class credittarget : MonoBehaviour
 {
     // Start is called before the first frame update
     public float _Speed; //¼Óµµ
     private Vector3 _direct = Vector3.zero;
     private GameObject _targetObj;
-    private float fDestroyTime = 0.5f;
-    private float fTickTime;
+
     // Start is called before the first frame update
     void Start()
     {
         _direct = new Vector3(-1.0f, 1.0f, 0.0f).normalized;
-        _targetObj = GameObject.Find("Target");
+        _targetObj = GameObject.Find("last");
     }
-
+    //
     private void Move1()
     {
         this.transform.position += new Vector3(0.0f, 0.01f, 0.0f);
@@ -25,15 +24,9 @@ public class Baljunsotarget : MonoBehaviour
     private void Update()
     {
 
-        if (transform.position == _targetObj.transform.position)
+        if (_targetObj != null)
         {
-            fTickTime += Time.deltaTime;
-
-            if (fTickTime >= fDestroyTime)
-            {
-                SceneManager.LoadScene("Inbaljunso");
-            }
+            this.transform.position = Vector3.MoveTowards(this.transform.position, _targetObj.transform.position, _Speed * Time.deltaTime);
         }
-        this.transform.position = Vector3.MoveTowards(this.transform.position, _targetObj.transform.position, _Speed * Time.deltaTime);
     }
 }
