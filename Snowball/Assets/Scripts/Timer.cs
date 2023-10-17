@@ -39,16 +39,15 @@ public class Timer : MonoBehaviour
                 if (currentKeyPresses >= maxKeyPresses)
                 {
                     clearText.gameObject.SetActive(true);
-                    SceneManager.LoadScene("Postoffice");
                 }
                 else
                 {
                     failText.gameObject.SetActive(true);
-                    SceneManager.LoadScene("Baljunso");
                 }
                 isSpacebarEnabled = false;
+                hasFailed = true;
+                StartCoroutine(LoadFailedScene());
             }
-            hasFailed = true;
         }
 
         if (isSpacebarEnabled && Input.GetKeyDown(KeyCode.Space) && currentKeyPresses < maxKeyPresses && !hasFailed)
@@ -66,5 +65,11 @@ public class Timer : MonoBehaviour
     void UpdateKeyPressesText()
     {
         keyPressesText.text = "³²Àº °¹¼ö: " + (maxKeyPresses - currentKeyPresses);
+    }
+
+    IEnumerator LoadFailedScene()
+    {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds before loading the Failed scene
+        SceneManager.LoadScene("Failed");
     }
 }

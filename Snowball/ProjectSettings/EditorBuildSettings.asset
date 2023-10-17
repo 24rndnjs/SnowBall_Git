@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene1COPY.unity
     guid: 778f3d363683737459c5f5b1b6733cc2
   - enabled: 1
+    path: Assets/Scenes/Failed.unity
+    guid: ffd32698c8c43cb4e97535aeb39bf516
+  - enabled: 1
     path: Assets/Scenes/mirror.unity
     guid: fe49110742f9ba946894a620371e4610
   - enabled: 1
