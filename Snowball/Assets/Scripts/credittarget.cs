@@ -16,7 +16,7 @@ public class credittarget : MonoBehaviour
         _direct = new Vector3(-1.0f, 1.0f, 0.0f).normalized;
         _targetObj = GameObject.Find("last");
     }
-
+    //
     private void Move1()
     {
         this.transform.position += new Vector3(0.0f, 0.01f, 0.0f);
