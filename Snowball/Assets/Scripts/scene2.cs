@@ -16,4 +16,8 @@ public class scene2 : MonoBehaviour
 
         SceneManager.LoadScene("Scene2 Copy");
     }
+    public void failed()
+    {
+        SceneManager.LoadScene("Inbaljunso");
+    }
 }
