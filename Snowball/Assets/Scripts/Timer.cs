@@ -1,47 +1,59 @@
-using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float setTime = 30.0f;
+    [SerializeField] float setTime = 20.0f;
     [SerializeField] Text countdownText;
     [SerializeField] Text keyPressesText;
-    [SerializeField] Text clearText; // 추가: 클리어 텍스트
+    [SerializeField] Text clearText;
     [SerializeField] int maxKeyPresses = 200;
+    [SerializeField] Text failText;
     int currentKeyPresses = 0;
     bool isSpacebarEnabled = true;
+    bool hasFailed = false;
 
     void Start()
     {
         UpdateCountdownText();
         UpdateKeyPressesText();
-        clearText.gameObject.SetActive(false); // 클리어 텍스트 비활성화
+        clearText.gameObject.SetActive(false);
+        failText.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (setTime > 0 && currentKeyPresses < maxKeyPresses)
+        if (setTime > 0 && currentKeyPresses < maxKeyPresses && !hasFailed)
         {
             setTime -= Time.deltaTime;
             UpdateCountdownText();
         }
-        else
+
+        if (setTime <= 0 || currentKeyPresses >= maxKeyPresses)
         {
-            setTime = 0f;
-            Time.timeScale = 0.0f;
-            UpdateCountdownText();
+            if (!hasFailed)
+            {
+                if (currentKeyPresses >= maxKeyPresses)
+                {
+                    clearText.gameObject.SetActive(true);
+                }
+                else
+                {
+                    failText.gameObject.SetActive(true);
+                    SceneManager.LoadScene("Baljunso");
+                }
+                isSpacebarEnabled = false;
+            }
+            hasFailed = true;
         }
 
-        if (isSpacebarEnabled && Input.GetKeyDown(KeyCode.Space) && currentKeyPresses < maxKeyPresses)
+        if (isSpacebarEnabled && Input.GetKeyDown(KeyCode.Space) && currentKeyPresses < maxKeyPresses && !hasFailed)
         {
             currentKeyPresses++;
             UpdateKeyPressesText();
-
-            if (currentKeyPresses >= maxKeyPresses)
-            {
-                isSpacebarEnabled = false; // 스페이스바 입력 비활성화
-                ShowClearText(); // 클리어 텍스트 표시
-            }
         }
     }
 
@@ -53,10 +65,5 @@ public class Timer : MonoBehaviour
     void UpdateKeyPressesText()
     {
         keyPressesText.text = "남은 갯수: " + (maxKeyPresses - currentKeyPresses);
-    }
-
-    void ShowClearText()
-    {
-        clearText.gameObject.SetActive(true); // 클리어 텍스트 활성화
     }
 }
