@@ -31,7 +31,7 @@ public class Baljunsotarget : MonoBehaviour
 
             if (fTickTime >= fDestroyTime)
             {
-                SceneManager.LoadScene("Inbaljunso");
+                SceneManager.LoadScene("wheel");
             }
         }
         this.transform.position = Vector3.MoveTowards(this.transform.position, _targetObj.transform.position, _Speed * Time.deltaTime);

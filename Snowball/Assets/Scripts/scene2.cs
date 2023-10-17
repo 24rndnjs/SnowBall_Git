@@ -18,6 +18,11 @@ public class scene2 : MonoBehaviour
     }
     public void failed()
     {
+        SceneManager.LoadScene("wheel");
+    }
+    public void WHEEL()
+    {
+
         SceneManager.LoadScene("Inbaljunso");
     }
 }
