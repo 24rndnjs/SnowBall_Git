@@ -12,7 +12,7 @@ public class Buscharactermove : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void Update() 
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         Vector3 flipMove = Vector3.zero;

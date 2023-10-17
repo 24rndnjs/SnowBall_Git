@@ -832,7 +832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734497743}
   m_Layer: 5
-  m_Name: GameObject (2)
+  m_Name: Collisiondetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1148,7 +1148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1028368960}
   m_Layer: 5
-  m_Name: GameObject (1)
+  m_Name: Collisiondetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1187,7 +1187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033090913}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Collisiondetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
