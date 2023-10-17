@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class copymove : MonoBehaviour
-{//
+{
     [SerializeField][Range(1f, 10f)] float moveSpeed = 3f;
     Animator animator;
 
