@@ -9,6 +9,7 @@ public class BusCOPYBtnManager : MonoBehaviour
     public GameObject BusSpriteoff;
     public GameObject OnBusTriger;
     public GameObject obj;
+    public GameObject Chatobj;
 
     public void JoBtnOnclick()
     {
@@ -17,5 +18,6 @@ public class BusCOPYBtnManager : MonoBehaviour
         BusSpriteoff.SetActive(false);
         OnBusTriger.SetActive(true);
         obj.GetComponent<Buscharactermove>().enabled = false;
+        Chatobj.GetComponent<ChatWindowScripts>().enabled = true;
     }
 }
