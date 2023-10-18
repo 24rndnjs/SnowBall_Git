@@ -41,7 +41,7 @@ public class BusCOPYBtnManager : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     chatName.text = "ÀüÃÊ¹ã";
-                    chatName2.text = "Á¡ÃÊ¹ã";
+                    chatName2.text = "ÀüÃÊ¹ã";
                     chatTxT.text = "³× ±×·²°Ô¿ä.";
                     chatTxT2.text = "³× ±×·²°Ô¿ä.";
                     Count++;
@@ -49,7 +49,7 @@ public class BusCOPYBtnManager : MonoBehaviour
                 else if (Input.GetMouseButtonDown(1))
                 {
                     chatName.text = "ÀüÃÊ¹ã";
-                    chatName2.text = "Á¡ÃÊ¹ã";
+                    chatName2.text = "ÀüÃÊ¹ã";
                     chatTxT.text = "³× ±×·²°Ô¿ä.";
                     chatTxT2.text = "³× ±×·²°Ô¿ä.";
                     Count++;

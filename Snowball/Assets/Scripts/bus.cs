@@ -8,7 +8,7 @@ public class bus : MonoBehaviour
     public float _Speed; //¼Óµµ
     private Vector3 _direct = Vector3.zero;
     private GameObject _targetObj;
-    private float fDestroyTime = 2f;
+    private float fDestroyTime = 0.5f;
     private float fTickTime;
 
     // Start is called before the first frame update
