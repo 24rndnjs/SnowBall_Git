@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GoOutBtnScripts : MonoBehaviour
@@ -9,5 +10,9 @@ public class GoOutBtnScripts : MonoBehaviour
     public void ExitBtnClick()
     {
         Target1.SetActive(true);
+    }
+    public void BalSoExitBtnOnClik()
+    {
+        SceneManager.LoadScene("BaljunsoCopy");
     }
 }
