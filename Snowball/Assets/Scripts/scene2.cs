@@ -34,4 +34,8 @@ public class scene2 : MonoBehaviour
     {
         SceneManager.LoadScene("wheelCopy");
     }
+    public void waybackhome()
+    {
+        SceneManager.LoadScene("BaljunsoCopy");
+    }
 }
