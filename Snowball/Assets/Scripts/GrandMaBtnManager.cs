@@ -7,6 +7,10 @@ public class GrandMaBtnManager : MonoBehaviour
 {
     public GameObject TalkImg;
     public GameObject obj;
+    public Text chatName;
+    public Text chatName2;
+    public Text chatTxT;
+    public Text chatTxT2;
 
     public void GrandTheftAuotoOnClicker()
     {
