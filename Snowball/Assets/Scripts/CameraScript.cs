@@ -6,7 +6,7 @@ public class CameraScript : MonoBehaviour
 {
     public Transform PPlayer; // 플레이어를 가리키는 변수
     public float cameraSpeed = 5.0f;
-    float yOffset = 3f;
+    public float yOffset;
 
     public GameObject player;
     Transform AT;

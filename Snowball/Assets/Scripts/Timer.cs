@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
                 if (currentKeyPresses >= maxKeyPresses)
                 {
                     clearText.gameObject.SetActive(true);
-                    SceneManager.LoadScene("Postoffice");
+                    SceneManager.LoadScene("tongro");
                 }
                 else
                 {

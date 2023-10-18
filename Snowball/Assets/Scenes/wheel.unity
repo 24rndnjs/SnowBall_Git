@@ -1013,6 +1013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PPlayer: {fileID: 1682614773}
   cameraSpeed: 1000
+  yOffset: 3
   player: {fileID: 1682614772}
 --- !u!1 &1564285544
 GameObject:

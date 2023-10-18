@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/busstation.unity
     guid: cae67ce91977d024d8c99efa01740781
   - enabled: 1
+    path: Assets/Scenes/tongro.unity
+    guid: 76e9d38c72e5e80408276548afc1cc45
+  - enabled: 1
     path: Assets/Scenes/lastscene.unity
     guid: d21e6b7ef43a96348b960a38225d9123
   - enabled: 1
@@ -68,4 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BaljunsoCopy.unity
     guid: ca4d3cf370504824793d7a3bf60320b9
+  - enabled: 1
+    path: Assets/Scenes/ambulance.unity
+    guid: c6585abc0dd9ad444a355f60d2e5f9a1
   m_configObjects: {}

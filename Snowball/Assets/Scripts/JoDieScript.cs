@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class JoDieScript : MonoBehaviour
@@ -84,6 +85,7 @@ public class JoDieScript : MonoBehaviour
                 TalkImg.SetActive(false);
                 obj.GetComponent<Buscharactermove>().enabled = true;
                 Cheak = false;
+                SceneManager.LoadScene("ambulance");
             }
         }
     }

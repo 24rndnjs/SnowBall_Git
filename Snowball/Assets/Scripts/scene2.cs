@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class scene2 : MonoBehaviour
 {
@@ -42,18 +43,22 @@ public class scene2 : MonoBehaviour
     {
         SceneManager.LoadScene("lastscene");
     }
-
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("Credit");
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            SceneManager.LoadScene("Credit");
-        }
+        SceneManager.LoadScene("Postoffice");
     }
+
+    //void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        SceneManager.LoadScene("Credit");
+    //    }
+    //    if (Input.GetMouseButtonDown(1))
+    //    {
+    //        SceneManager.LoadScene("Credit");
+    //    }
+    //}
     //public void credit()
     //{
     //    SceneManager.LoadScene("Credit");
