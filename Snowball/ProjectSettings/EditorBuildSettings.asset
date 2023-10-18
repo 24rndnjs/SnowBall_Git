@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: ab6942d7be1bb214fa839018c46058c7
   - enabled: 1
+    path: Assets/Scenes/busstation.unity
+    guid: cae67ce91977d024d8c99efa01740781
+  - enabled: 1
     path: Assets/Scenes/Postoffice.unity
     guid: c78e65b1ef745e746805d95f90ef081d
   - enabled: 1
