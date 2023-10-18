@@ -1,14 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-
-public class Wheel: MonoBehaviour
+public class WheelMove : MonoBehaviour
 {
     private Animator animator;
 
     void Start()
     {
-        // Animator 컴포넌트 가져오기
         animator = GetComponent<Animator>();
     }
 
@@ -16,12 +15,11 @@ public class Wheel: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("isWheeling", true);
+            animator.SetBool("isWalking", true);
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            animator.SetBool("isWheeling", false);
+            animator.SetBool("isWalking", false);
         }
     }
 }
-
