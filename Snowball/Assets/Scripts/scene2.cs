@@ -38,4 +38,12 @@ public class scene2 : MonoBehaviour
     {
         SceneManager.LoadScene("BaljunsoCopy");
     }
+    public void last()
+    {
+        SceneManager.LoadScene("lastscene");
+    }
+    public void credit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
 }
