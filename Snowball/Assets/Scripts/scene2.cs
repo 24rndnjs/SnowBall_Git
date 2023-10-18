@@ -25,4 +25,9 @@ public class scene2 : MonoBehaviour
 
         SceneManager.LoadScene("Inbaljunso");
     }
+    public void Busloading()
+    {
+
+        SceneManager.LoadScene("Baljunso");
+    }
 }
