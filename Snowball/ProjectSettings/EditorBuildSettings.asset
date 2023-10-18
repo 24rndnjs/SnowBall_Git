@@ -74,4 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ambulance.unity
     guid: c6585abc0dd9ad444a355f60d2e5f9a1
+  - enabled: 1
+    path: Assets/Scenes/Credit.unity
+    guid: 93a15e8a23895ca498350527f1c3853b
   m_configObjects: {}
