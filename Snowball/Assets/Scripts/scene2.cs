@@ -42,8 +42,20 @@ public class scene2 : MonoBehaviour
     {
         SceneManager.LoadScene("lastscene");
     }
-    public void credit()
+
+    void Update()
     {
-        SceneManager.LoadScene("Credit");
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene("Credit");
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            SceneManager.LoadScene("Credit");
+        }
     }
+    //public void credit()
+    //{
+    //    SceneManager.LoadScene("Credit");
+    //}
 }
