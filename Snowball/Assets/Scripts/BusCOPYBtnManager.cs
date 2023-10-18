@@ -42,16 +42,16 @@ public class BusCOPYBtnManager : MonoBehaviour
                 {
                     chatName.text = "전초밤";
                     chatName2.text = "전초밤";
-                    chatTxT.text = "네 그럴게요.";
-                    chatTxT2.text = "네 그럴게요.";
+                    chatTxT.text = "아...네...";
+                    chatTxT2.text = "아...네...";
                     Count++;
                 }
                 else if (Input.GetMouseButtonDown(1))
                 {
                     chatName.text = "전초밤";
                     chatName2.text = "전초밤";
-                    chatTxT.text = "네 그럴게요.";
-                    chatTxT2.text = "네 그럴게요.";
+                    chatTxT.text = "아...네...";
+                    chatTxT2.text = "아...네...";
                     Count++;
                 }
             }
