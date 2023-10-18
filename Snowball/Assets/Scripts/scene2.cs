@@ -30,4 +30,8 @@ public class scene2 : MonoBehaviour
 
         SceneManager.LoadScene("Baljunso");
     }
+    public void Rerode()
+    {
+        SceneManager.LoadScene("wheelCopy");
+    }
 }
