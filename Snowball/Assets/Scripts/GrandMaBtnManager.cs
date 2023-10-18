@@ -77,16 +77,16 @@ public class GrandMaBtnManager : MonoBehaviour
                 {
                     chatName.text = "전초밤";
                     chatName2.text = "전초밤";
-                    chatTxT.text = "할머니 여자친구 아니라니까요~";
-                    chatTxT2.text = "할머니 여자친구 아니라니까요~";
+                    chatTxT.text = "할머니! 여자친구 아니라니까요~";
+                    chatTxT2.text = "할머니! 여자친구 아니라니까요~";
                     Count++;
                 }
                 else if (Input.GetMouseButtonDown(1))
                 {
                     chatName.text = "전초밤";
                     chatName2.text = "전초밤";
-                    chatTxT.text = "할머니 여자친구 아니라니까요~";
-                    chatTxT2.text = "할머니 여자친구 아니라니까요~";
+                    chatTxT.text = "할머니! 여자친구 아니라니까요~";
+                    chatTxT2.text = "할머니! 여자친구 아니라니까요~";
                     Count++;
                 }
             }
